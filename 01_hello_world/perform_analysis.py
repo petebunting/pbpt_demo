@@ -34,7 +34,10 @@ class ProcessCmd(PBPTQProcessTool):
         # You do not need this but it means the jobs
         # will take a little longer to run so you can  
         # use the run_report.sh script to see progress
-        time.sleep(random.randint(5, 20)) 
+        slp_time = random.randint(5, 20)
+        print(f"Sleeping for {slp_time}")
+        time.sleep(slp_time) 
+        print("Finished")
 
     def required_fields(self, **kwargs):
         # Return a list of the required fields which will be checked
